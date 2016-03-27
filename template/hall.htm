@@ -1,0 +1,313 @@
+<!--{template common/header}-->
+</div>
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/assets/css/zzza.css?{VERHASH}" />
+<div class="wp">
+	<div id="pt" class="bm cl">
+		<div class="z">
+			<a href="./" class="nvhm" title="{lang homepage}"><!--{$_G[setting][bbname]}--></a><em>&raquo;</em><a href="<!--{$set['zzza_link']}-->">每日摇摇乐</a>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/assets/js/jquery-1.7.2-min.js?{VERHASH}"></script>
+<script type="text/javascript">
+	var zzza_jq = jQuery.noConflict();
+</script>
+<div class="zzza_wp">
+	<div class="wp zzza_hall">
+		<div class="zzza_top">
+			<div class="zzza_top_left">
+				<div class="zzza_top_left_user">
+					<div class="zzza_top_left_user_avatar">
+						{avatar($_G['uid'],middle)}
+					</div>
+					<div class="zzza_top_left_user_info">
+						{$_G['username']}
+					</div>
+				</div>
+				<div class="zzza_top_left_rank">
+					<ul>
+						<li>
+							<p class="zzza_top_left_rank_grade">
+								<i class="zzza_grade zzza_grade_{$userGradeVal}_{$gradeset}"></i><span class="zzza_grade_span">{$userGradeTitle}</span>
+							</p>
+							<p class="zzza_top_left_rank_title faq" style="text-align: left;" id="zzzagrade" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'zzzagrade','pos':'43!','ctrlclass':'a','duration':2});});">
+								{$userGradeTx}
+							</p>
+						</li>
+						<li>
+							<p class="zzza_top_left_rank_num">
+								<span>
+									{$zzzadata['continuous_day']}
+								</span>
+								天
+							</p>
+							<p class="zzza_top_left_rank_title">
+								连续摇奖
+							</p>
+						</li>
+						<li>
+							<p>
+								<span class="zzza_top_left_rank_num">
+									{$zzzadata['total_counts']}
+								</span>
+								天
+							</p>
+							<p class="zzza_top_left_rank_title">
+								总摇奖
+							</p>
+						</li>
+						<li>
+							<p class="zzza_top_left_rank_num">
+								<span>
+									{$zzzadata['total_extcredit']}
+								</span>
+								{$extcredit_title}
+							</p>
+							<p class="zzza_top_left_rank_title">
+								累积奖励
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="zzza_top_right">
+				<div class="zzza_top_right_date" id="calendar" onmouseover="delayShow(this, function () {showMenu({'ctrlid':'calendar','pos':'43!','ctrlclass':'a','duration':2});});">
+					<p class="zzza_top_right_date_m">
+						{eval echo date('m/d',$_G['timestamp']);}
+					</p>
+					<p class="zzza_top_right_date_y">
+						{eval echo date('Y',$_G['timestamp']);}
+					</p>
+				</div>
+				<div class="zzza_top_right_play <!--{if $today_mark == 1}-->zzza_top_right_play_over<!--{/if}-->">
+					<!--{if $today_mark == 1}-->
+						<p>
+							<a href="javascript:;">
+								摇
+							</a>
+						</p>
+						<p class="zzza_top_right_play_p1">
+							已摇奖
+						</p>
+					<!--{else}-->
+						<p>
+							<a href="javascript:;" <!--{if $undone_num > 0}-->onclick="showDialog('<div>先完成今日任务，再来每日摇摇乐吧</div><div>在以下版块完成任务</div><div><ul class=\'forums_list\'>{loop $forums $v}<li><a href=\'forum.php?mod=forumdisplay&fid={$v}\' target=\'_blank\'>{eval echo DB::result_first("SELECT name FROM ".DB::table('forum_forum')." WHERE fid = '".$v."'");}</a></li>{/loop}<ul></div>', 'notice', '提示信息','', 0, null, '', '', '', '');"<!--{else}-->onclick="$('zzza_random_box').style.display = 'block';"<!--{/if}-->>
+								摇
+							</a>
+						</p>
+						<!--{if $undone_num > 0}-->
+							<p class="zzza_top_right_play_p1">
+								今天需<!--{if $task_type == '1'}-->发布<!--{elseif $task_type == '2'}-->回复<!--{elseif $task_type == '3'}-->发布<!--{/if}-->
+							</p>
+							<p class="zzza_top_right_play_p2">
+								<strong>{$undone_num}</strong><!--{if $task_type == '1'}-->个主题<!--{elseif $task_type == '2'}-->个帖子<!--{elseif $task_type == '3'}-->个帖子<!--{/if}-->
+							</p>
+						<!--{else}-->
+							<p class="zzza_top_right_play_p1">
+								开始摇一摇
+							</p>
+						<!--{/if}-->
+					<!--{/if}-->
+				</div>
+			</div>
+		</div>
+		<div class="zzza_bottom">
+			<div class="zzza_bottom_nav">
+				<ul>
+					<li><a href="plugin.php?id=yinxingfei_zzza&mod=hall&order=today_extcredit" {if $order == 'today_extcredit'}class="on"{/if}>今日排行</a></li>
+					<li><a href="plugin.php?id=yinxingfei_zzza&mod=hall&order=luckdays" {if $order == 'luckdays'}class="on"{/if}>{$set['luckdays']}天排行</a></li>
+					<li><a href="plugin.php?id=yinxingfei_zzza&mod=hall&order=continuous_day" {if $order == 'continuous_day'}class="on"{/if}>连续排行</a></li>
+					<li><a href="plugin.php?id=yinxingfei_zzza&mod=hall&order=total_extcredit" {if $order == 'total_extcredit'}class="on"{/if}>累积排行</a></li>
+					<li><a href="plugin.php?id=yinxingfei_zzza&mod=hall&order=total_counts" {if $order == 'total_counts'}class="on"{/if}>总排行</a></li>
+				</ul>
+			</div>
+			<div class="zzza_bottom_list">
+				{if $order == 'today_extcredit'}
+					<table class="zzza_bottom_list_table">
+						<tbody>
+							<tr>
+								<th class="zzza_w1">昵称</th>
+								<th class="zzza_w2">今日摇出</th>
+								<th class="zzza_w3">目前等级</th>
+								<th class="zzza_w4">摇奖时间</th>
+								<th class="zzza_w5">连续摇奖</th>
+								<th class="zzza_w6">总摇奖</th>
+								<th class="zzza_w7">累积奖励</th>
+							</tr>
+							{loop $rank_list $k $v}
+							<tr>
+								<td class="zzza_w1">
+									<a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">
+										{avatar($v['uid'],middle)}
+										<span>{$v['username']}</span>
+									</a>
+								</td>
+								<td class="zzza_w2">{$v['today_extcredit']}{$extcredit_title}</td>
+								<td class="zzza_w3"><div id="offsetWidth_{$k}" style="overflow:hidden;margin:0 auto;"><i class="zzza_grade zzza_grade_{$v['grade']}_{$gradeset}"></i><span class="zzza_grade_span" id="soffsetWidth_{$k}">{$v['grouptitle']}</span></div></td>
+								<td class="zzza_w4">{eval echo dgmdate($v['dateline'],'Y-m-d H:i',$_G['setting']['timeoffset']);}</td>
+								<td class="zzza_w5">{$v['continuous_day']}天</td>
+								<td class="zzza_w6">{$v['total_counts']}天</td>
+								<td class="zzza_w7">{$v['total_extcredit']}{$extcredit_title}</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				{elseif $order == 'luckdays'}
+					<table class="zzza_bottom_list_table">
+						<tbody>
+							<tr>
+								<th class="zzza_w1">昵称</th>
+								<th class="zzza_w2">{$set['luckdays']}天累积</th>
+								<th class="zzza_w3">目前等级</th>
+								<th class="zzza_w5">连续摇奖</th>
+								<th class="zzza_w6">总摇奖</th>
+								<th class="zzza_w7">累积奖励</th>
+							</tr>
+							{loop $rank_list $k $v}
+							{eval $va = DB::fetch_first("SELECT * FROM ".DB::table('yinxingfei_zzza_rank')." WHERE uid = '".$v['uid']."'");}
+							<tr>
+								<td class="zzza_w1">
+									<a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">
+										{avatar($v['uid'],middle)}
+										<span>{$va['username']}</span>
+									</a>
+								</td>
+								<td class="zzza_w2">{$v['total_extcredit']}{$extcredit_title}</td>
+								<td class="zzza_w3"><div id="offsetWidth_{$k}" style="overflow:hidden;margin:0 auto;"><i class="zzza_grade zzza_grade_{$va['grade']}_{$gradeset}"></i><span class="zzza_grade_span" id="soffsetWidth_{$k}">{$va['grouptitle']}</span></div></td>
+								<td class="zzza_w5">{$va['continuous_day']}天</td>
+								<td class="zzza_w6">{$va['total_counts']}天</td>
+								<td class="zzza_w7">{$va['total_extcredit']}{$extcredit_title}</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				{elseif $order == 'continuous_day'}
+					<table class="zzza_bottom_list_table">
+						<tbody>
+							<tr>
+								<th class="zzza_w1">昵称</th>
+								<th class="zzza_w2">连续摇奖</th>
+								<th class="zzza_w3">目前等级</th>
+								<th class="zzza_w6">总摇奖</th>
+								<th class="zzza_w7">累积奖励</th>
+							</tr>
+							{loop $rank_list $k $v}
+							<tr>
+								<td class="zzza_w1">
+									<a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">
+										{avatar($v['uid'],middle)}
+										<span>{$v['username']}</span>
+									</a>
+								</td>
+								<td class="zzza_w2">{$v['continuous_day']}天</td>
+								<td class="zzza_w3"><div id="offsetWidth_{$k}" style="overflow:hidden;margin:0 auto;"><i class="zzza_grade zzza_grade_{$v['grade']}_{$gradeset}"></i><span class="zzza_grade_span" id="soffsetWidth_{$k}">{$v['grouptitle']}</span></div></td>
+								<td class="zzza_w6">{$v['total_counts']}天</td>
+								<td class="zzza_w7">{$v['total_extcredit']}{$extcredit_title}</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				{elseif $order == 'total_extcredit'}
+					<table class="zzza_bottom_list_table">
+						<tbody>
+							<tr>
+								<th class="zzza_w1">昵称</th>
+								<th class="zzza_w2">累积奖励</th>
+								<th class="zzza_w3">目前等级</th>
+								<th class="zzza_w5">连续摇奖</th>
+								<th class="zzza_w6" style="padding-right: 64px;">总摇奖</th>
+							</tr>
+							{loop $rank_list $k $v}
+							<tr>
+								<td class="zzza_w1">
+									<a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">
+										{avatar($v['uid'],middle)}
+										<span>{$v['username']}</span>
+									</a>
+								</td>
+								<td class="zzza_w2">{$v['total_extcredit']}{$extcredit_title}</td>
+								<td class="zzza_w3"><div id="offsetWidth_{$k}" style="overflow:hidden;margin:0 auto;"><i class="zzza_grade zzza_grade_{$v['grade']}_{$gradeset}"></i><span class="zzza_grade_span" id="soffsetWidth_{$k}">{$v['grouptitle']}</span></div></td>
+								<td class="zzza_w5">{$v['continuous_day']}天</td>
+								<td class="zzza_w6" style="padding-right: 64px;">{$v['total_counts']}天</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				{elseif $order == 'total_counts'}
+					<table class="zzza_bottom_list_table">
+						<tbody>
+							<tr>
+								<th class="zzza_w1">昵称</th>
+								<th class="zzza_w2">总摇奖</th>
+								<th class="zzza_w3">目前等级</th>
+								<th class="zzza_w5">连续摇奖</th>
+								<th class="zzza_w6" style="padding-right: 64px;">累积奖励</th>
+							</tr>
+							{loop $rank_list $k $v}
+							<tr>
+								<td class="zzza_w1">
+									<a href="home.php?mod=space&uid={$v['uid']}&do=profile" target="_blank">
+										{avatar($v['uid'],middle)}
+										<span>{$v['username']}</span>
+									</a>
+								</td>
+								<td class="zzza_w2">{$v['total_counts']}天</td>
+								<td class="zzza_w3"><div id="offsetWidth_{$k}" style="overflow:hidden;margin:0 auto;"><i class="zzza_grade zzza_grade_{$v['grade']}_{$gradeset}"></i><span class="zzza_grade_span" id="soffsetWidth_{$k}">{$v['grouptitle']}</span></div></td>
+								<td class="zzza_w5">{$v['continuous_day']}天</td>
+								<td class="zzza_w6" style="padding-right: 64px;">{$v['total_extcredit']}{$extcredit_title}</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				{/if}
+				<div class="zzza_page">{$multipage}</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="zzzagrade_menu" class="p_pop" style="display: none;">
+	<div>
+		<ul class="mbn pbn">
+			<li class="zzzagrade_menu_top">累积摇奖天数</li>
+			{loop $list_grade $v_grade}
+			<li><i class="zzza_grade zzza_grade_{$v_grade['id']}_{$gradeset}"></i><span class="zzza_grade_span">{$v_grade['grouptitle']}: {$v_grade['min']} - {$v_grade['max']}天</span></li>
+			{/loop}
+		</ul>
+	</div>
+</div>
+<div id="calendar_menu" class="p_pop" style="display: none;">
+	<div class="zzza_calendar" >
+    <table cellspacing="0" cellpadding="0" width="100%" style="text-align: center;">
+        <tbody>
+            <tr align="center" class="zzza_calendar_week" >
+                <td colspan="7" >
+                    每日摇摇乐{eval echo dgmdate($v['dateline'],'Y年m月',$_G['setting']['timeoffset']);}记录
+                </td>
+            </tr>
+            <tr class="zzza_calendar_header"  >
+                <td>日</td>
+				<td>一</td>
+                <td>二</td>
+                <td>三</td>
+                <td>四</td>
+                <td>五</td>
+                <td>六</td>
+            </tr>
+			{$calendar}
+        </tbody>
+    </table>
+</div>
+</div>
+<script type="text/javascript">
+zzza_jq(document).ready(function(){
+	<!--{loop $rank_list $vjs $v}-->
+	var offsetWidth_<!--{$vjs}--> = 20 + $('soffsetWidth_<!--{$vjs}-->').offsetWidth;
+	$('offsetWidth_<!--{$vjs}-->').style.width = offsetWidth_<!--{$vjs}-->+'px';
+	<!--{/loop}-->
+});
+</script>
+<div class="wp">
+<!--{if $display_plate || $over == 'yes'}-->
+	<!--{eval include yinxingfei_zzza_extend_template('yinxingfei_zzza:plate');}-->
+<!--{/if}-->
+<!--{template common/footer}-->

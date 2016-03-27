@@ -1,0 +1,110 @@
+.zzza_random_box, .zzza_random_box .zzza_bottom_button a, .zzza_random_result, .zzza_random_banner {
+    background-image: url(../img/zzza_bg.png);
+    background-repeat: no-repeat;
+}
+.zzza_random_box {
+	position: fixed;
+    z-index: 10000;
+    width: 574px;
+	height: 235px;
+    background-position: -1px -313px;
+    padding-top: 181px;
+	left:50%;
+	top:50%;
+	margin-left: -287px;
+    margin-top: -208px;
+	display: none;
+}
+.zzza_number_wrap {
+    position: relative;
+    width: 309px;
+    height: 77px;
+    margin: 0 auto;
+	overflow:hidden;
+}
+.zzza_num {
+    color: #FFF;
+    position: relative;
+    float: left;
+    width: 53px;
+    height: 77px;
+    margin-right: 11px;
+    overflow: hidden;
+}
+.zzza_num em {
+    height: 77px;
+    width: 53px;
+    text-align: center;
+	display: block;
+}
+.zzza_num_last {
+    color: #FFF;
+    position: relative;
+    float: left;
+    width: 117px;
+    height: 77px;
+    overflow: hidden;
+}
+.zzza_num_last span {
+	width: 115px;
+    height: 77px;
+    text-align: center;
+    color: #FFF;
+    line-height: 77px;
+    font-size: 40px;
+	display:block;
+}
+.zzza_random_bottom {
+	width: 352px;
+    height: 50px;
+    padding: 28px 0px 0px 0px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.zzza_random_bottom_button {
+    width: 352px;
+    height: 50px;
+}
+.zzza_random_bottom_button a{
+	width: 352px;
+    height: 50px;
+    display: block;
+    line-height: 999px;
+	background-position: -112px -599px;
+    overflow: hidden;
+}
+.zzza_random_bottom_button a:hover{
+	text-decoration:none;
+	background-position: -112px 0;
+}
+.zzza_random_banner {
+    width: 381px;
+    height: 74px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-position: -97px -53px;
+    line-height: 58px;
+    color: #ffffff;
+    text-align: center;
+    padding: 6px 0px 0px 0px;
+}
+.zzza_close_random_box {
+    position: absolute;
+    left: 461px;
+    top: 135px;
+    width: 28px;
+    height: 28px;
+    line-height: 999px;
+    overflow: hidden;
+}
+.zzza_random_result {
+    width: 381px;
+    height: 141px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-position: -97px -136px;
+    line-height: 90px;
+    text-align: center;
+    padding: 6px 0px 0px 0px;
+    color: #333;
+}

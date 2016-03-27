@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<root>
+	<item id="Title"><![CDATA[Discuz! Plugin]]></item>
+	<item id="Version"><![CDATA[X3.2]]></item>
+	<item id="Time"><![CDATA[2016-02-29 23:13]]></item>
+	<item id="From"><![CDATA[Discuz! Board (http://dz.com/)]]></item>
+	<item id="Data">
+		<item id="plugin">
+			<item id="available"><![CDATA[1]]></item>
+			<item id="adminid"><![CDATA[1]]></item>
+			<item id="name"><![CDATA[每日摇摇乐]]></item>
+			<item id="identifier"><![CDATA[yinxingfei_zzza]]></item>
+			<item id="description"><![CDATA[每日摇摇乐，摇摇更开心，活跃会员!]]></item>
+			<item id="datatables"><![CDATA[]]></item>
+			<item id="directory"><![CDATA[yinxingfei_zzza/]]></item>
+			<item id="copyright"><![CDATA[尹兴飞 | thinfell.com]]></item>
+			<item id="version"><![CDATA[6.3]]></item>
+			<item id="__modules">
+				<item id="0">
+					<item id="name"><![CDATA[hook]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[11]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[0]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="1">
+					<item id="name"><![CDATA[probability]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[摇奖范围与概率]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="2">
+					<item id="name"><![CDATA[yinxingfei_zzza]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[每日摇摇乐]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[1]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[1]]></item>
+					<item id="navtitle"><![CDATA[每日摇摇乐]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="3">
+					<item id="name"><![CDATA[grade]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[用户等级]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[2]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+				<item id="4">
+					<item id="name"><![CDATA[extend]]></item>
+					<item id="param"><![CDATA[]]></item>
+					<item id="menu"><![CDATA[插件扩展]]></item>
+					<item id="url"><![CDATA[]]></item>
+					<item id="type"><![CDATA[3]]></item>
+					<item id="adminid"><![CDATA[0]]></item>
+					<item id="displayorder"><![CDATA[99]]></item>
+					<item id="navtitle"><![CDATA[]]></item>
+					<item id="navicon"><![CDATA[]]></item>
+					<item id="navsubname"><![CDATA[]]></item>
+					<item id="navsuburl"><![CDATA[]]></item>
+				</item>
+			</item>
+		</item>
+		<item id="version"><![CDATA[X3.2]]></item>
+		<item id="var">
+			<item id="0">
+				<item id="displayorder"><![CDATA[1]]></item>
+				<item id="title"><![CDATA[用户组]]></item>
+				<item id="description"><![CDATA[哪些用户组能够使用"每日摇摇乐"?]]></item>
+				<item id="variable"><![CDATA[groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[9]]></item>
+					<item id="1"><![CDATA[10]]></item>
+					<item id="2"><![CDATA[14]]></item>
+					<item id="3"><![CDATA[12]]></item>
+					<item id="4"><![CDATA[11]]></item>
+					<item id="5"><![CDATA[13]]></item>
+					<item id="6"><![CDATA[15]]></item>
+					<item id="7"><![CDATA[20]]></item>
+					<item id="8"><![CDATA[16]]></item>
+					<item id="9"><![CDATA[17]]></item>
+					<item id="10"><![CDATA[18]]></item>
+					<item id="11"><![CDATA[19]]></item>
+					<item id="12"><![CDATA[1]]></item>
+					<item id="13"><![CDATA[2]]></item>
+					<item id="14"><![CDATA[3]]></item>
+					<item id="15"><![CDATA[4]]></item>
+					<item id="16"><![CDATA[5]]></item>
+					<item id="17"><![CDATA[6]]></item>
+					<item id="18"><![CDATA[7]]></item>
+					<item id="19"><![CDATA[8]]></item>
+				</item>
+			</item>
+			<item id="1">
+				<item id="displayorder"><![CDATA[2]]></item>
+				<item id="title"><![CDATA[积分类型]]></item>
+				<item id="description"><![CDATA["每日摇摇乐"奖励积分]]></item>
+				<item id="variable"><![CDATA[extcredit]]></item>
+				<item id="type"><![CDATA[extcredit]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="2">
+				<item id="displayorder"><![CDATA[3]]></item>
+				<item id="title"><![CDATA[每日任务类型]]></item>
+				<item id="description"><![CDATA[每日完成指定的任务可以进行"每日摇摇乐"]]></item>
+				<item id="variable"><![CDATA[task_type]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[3]]></item>
+				<item id="extra"><![CDATA[1 = 发布主题
+2 = 回复帖子
+3 = 发布主题+回复帖子]]></item>
+			</item>
+			<item id="3">
+				<item id="displayorder"><![CDATA[4]]></item>
+				<item id="title"><![CDATA[任务数量]]></item>
+				<item id="description"><![CDATA[完成多少任务数量可以"每日摇摇乐",填写"0"表示不用任务即可"每日摇摇乐"]]></item>
+				<item id="variable"><![CDATA[task_num]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="4">
+				<item id="displayorder"><![CDATA[5]]></item>
+				<item id="title"><![CDATA[不做任务用户组]]></item>
+				<item id="description"><![CDATA[选中的用户组，可以不用任务即可"每日摇摇乐"]]></item>
+				<item id="variable"><![CDATA[vip_groups]]></item>
+				<item id="type"><![CDATA[groups]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[]]></item>
+				</item>
+			</item>
+			<item id="5">
+				<item id="displayorder"><![CDATA[6]]></item>
+				<item id="title"><![CDATA[任务版块选择]]></item>
+				<item id="description"><![CDATA[选中的版块才可以统计任务 个数！如果选择“空”则表示没有选中任何版块！]]></item>
+				<item id="variable"><![CDATA[forums]]></item>
+				<item id="type"><![CDATA[forums]]></item>
+				<item id="extra"><![CDATA[]]></item>
+				<item id="__value">
+					<item id="0"><![CDATA[2]]></item>
+					<item id="1"><![CDATA[36]]></item>
+					<item id="2"><![CDATA[37]]></item>
+				</item>
+			</item>
+			<item id="6">
+				<item id="displayorder"><![CDATA[9]]></item>
+				<item id="title"><![CDATA[顶部文字设置]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usernav_position]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[1]]></item>
+				<item id="extra"><![CDATA[0 = 不显示
+1 = 显示位置1
+2 = 显示位置2
+3 = 显示位置3
+4 = 显示位置4]]></item>
+			</item>
+			<item id="7">
+				<item id="displayorder"><![CDATA[10]]></item>
+				<item id="title"><![CDATA[顶部文字内容]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usernav_txt]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[每日摇摇乐]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="8">
+				<item id="displayorder"><![CDATA[11]]></item>
+				<item id="title"><![CDATA[顶部文字颜色]]></item>
+				<item id="description"><![CDATA[]]></item>
+				<item id="variable"><![CDATA[usernav_color]]></item>
+				<item id="type"><![CDATA[color]]></item>
+				<item id="value"><![CDATA[#FF0000]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="9">
+				<item id="displayorder"><![CDATA[12]]></item>
+				<item id="title"><![CDATA[转盘积分字体大小]]></item>
+				<item id="description"><![CDATA[当你的积分文字太长，不能完整显示在摇奖盘上面的时候，可以尝试把字体大小改小，直接输入数字即可调整；]]></item>
+				<item id="variable"><![CDATA[plate_fontsize]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[40]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="10">
+				<item id="displayorder"><![CDATA[15]]></item>
+				<item id="title"><![CDATA[SEO[title]]]></item>
+				<item id="description"><![CDATA["每日摇摇乐"大厅，SEO优化[title]参数。]]></item>
+				<item id="variable"><![CDATA[title]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[每日摇摇乐]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="11">
+				<item id="displayorder"><![CDATA[16]]></item>
+				<item id="title"><![CDATA[SEO[keywords]]]></item>
+				<item id="description"><![CDATA["每日摇摇乐"大厅，SEO优化[keywords]参数。]]></item>
+				<item id="variable"><![CDATA[keywords]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[每日摇摇乐]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="12">
+				<item id="displayorder"><![CDATA[17]]></item>
+				<item id="title"><![CDATA[SEO[description]]]></item>
+				<item id="description"><![CDATA["每日摇摇乐"大厅，SEO优化[description]参数。]]></item>
+				<item id="variable"><![CDATA[description]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[每日摇摇乐]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="13">
+				<item id="displayorder"><![CDATA[18]]></item>
+				<item id="title"><![CDATA[伪静态链接]]></item>
+				<item id="description"><![CDATA[如果配置了伪静态，请把新的伪静态链接填进来，否则请勿改动！]]></item>
+				<item id="variable"><![CDATA[zzza_link]]></item>
+				<item id="type"><![CDATA[text]]></item>
+				<item id="value"><![CDATA[plugin.php?id=yinxingfei_zzza:yinxingfei_zzza]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="14">
+				<item id="displayorder"><![CDATA[19]]></item>
+				<item id="title"><![CDATA[运气榜统计]]></item>
+				<item id="description"><![CDATA[运气榜统计最近多少天内的累积奖励排名,输入正整数!]]></item>
+				<item id="variable"><![CDATA[luckdays]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[7]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+			<item id="15">
+				<item id="displayorder"><![CDATA[20]]></item>
+				<item id="title"><![CDATA[漂浮提醒位置]]></item>
+				<item id="description"><![CDATA["每日摇摇乐"全站提醒设置]]></item>
+				<item id="variable"><![CDATA[notice_position]]></item>
+				<item id="type"><![CDATA[select]]></item>
+				<item id="value"><![CDATA[2]]></item>
+				<item id="extra"><![CDATA[1 = 左下角
+2 = 右下角
+3 = 不显示]]></item>
+			</item>
+			<item id="16">
+				<item id="displayorder"><![CDATA[23]]></item>
+				<item id="title"><![CDATA[漂浮关闭时间]]></item>
+				<item id="description"><![CDATA[(单位秒)全站"每日摇摇乐"右下角或左下角的漂浮提醒,点击关闭以后再次显示的时间]]></item>
+				<item id="variable"><![CDATA[close_time]]></item>
+				<item id="type"><![CDATA[number]]></item>
+				<item id="value"><![CDATA[30]]></item>
+				<item id="extra"><![CDATA[]]></item>
+			</item>
+		</item>
+		<item id="installfile"><![CDATA[install.php]]></item>
+		<item id="uninstallfile"><![CDATA[uninstall.php]]></item>
+		<item id="upgradefile"><![CDATA[upgrade.php]]></item>
+	</item>
+</root>

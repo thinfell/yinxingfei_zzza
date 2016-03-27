@@ -1,0 +1,49 @@
+<!--{block return}-->
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/extend/zp_theme_default/assets/css/notice.css">
+<style>
+<!--{if $notice_position == '1'}-->
+.zzza_notice_main {
+	left: 5px;
+}
+<!--{else}-->
+.zzza_notice_main {
+	right: 5px;
+}
+<!--{/if}-->
+</style>
+<div class="zzza_notice_main" id="zzza_notice_close">
+    <div class="zzza_notice_left">
+        <div class="zzza_tsy"> 
+			<!--{if $undone_num > 0}-->
+			<a href="javascript:;" onclick="showDialog('<div>先完成今日任务，再来每日摇摇乐吧</div><div>在以下版块完成任务</div><div><ul class=\'forums_list\'>{loop $new_forums $v}<li><a href=\'forum.php?mod=forumdisplay&fid={$v['fid']}\' target=\'_blank\'>{$v['name']}</a></li>{/loop}<ul></div>', 'notice', '提示信息','', 0, null, '', '', '', '');" class="zzza_notice_button zzza_notice_undone">未完成任务</a>
+			<!--{else}-->
+			<a href="<!--{$set['zzza_link']}-->" class="zzza_notice_button">已完成任务</a>
+			<!--{/if}-->
+        </div>
+        <div class="zzza_notice_rwzs">
+		<!--{if $undone_num > 0}-->
+			今天需<!--{if $task_type == '1'}-->发布<!--{elseif $task_type == '2'}-->回复<!--{elseif $task_type == '3'}-->发布<!--{/if}-->
+				<span class="zzza_notice_undone_num">{$undone_num}</span>
+				<!--{if $task_type == '1'}-->个主题<!--{elseif $task_type == '2'}-->个帖子<!--{elseif $task_type == '3'}-->个帖子<!--{/if}-->
+		<!--{else}-->
+			已完成任务
+		<!--{/if}-->
+        </div>
+    </div>
+    <div class="zzza_notice_right">
+        <div class="zzza_continuous_dayl">
+            <div class="zzza_continuous_dayltxt">连续摇奖</div>
+			<div class="zzza_guanbi"><a href="javascript:;" onclick="guanbitx();">X</a></div>
+        </div>
+        <div class="zzza_continuous_dayr">
+            <strong>{$continuous_day}</strong><span class="zzza_tian">天</span>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+function guanbitx(){
+	ajaxget('plugin.php?id=yinxingfei_zzza:yinxingfei_zzza&mod=notice_close&close_time=<!--{$set['close_time']}-->');
+	document.getElementById('zzza_notice_close').style.display = "none";
+}
+</script>
+<!--{/block}-->	

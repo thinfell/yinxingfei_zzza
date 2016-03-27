@@ -1,0 +1,52 @@
+<link rel="stylesheet" type="text/css" href="source/plugin/yinxingfei_zzza/extend/zp_theme_default/assets/css/plate.css?{VERHASH}">
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/extend/zp_theme_default/assets/js/easing.js?{VERHASH}"></script>
+<script type="text/javascript" src="source/plugin/yinxingfei_zzza/extend/zp_theme_default/assets/js/zp_theme_default.js?{VERHASH}"></script>
+<!--{if $over == 'yes' && $today_mark == 1}-->
+<script type="text/javascript">
+	var zzza_jq = jQuery.noConflict();
+	zzza_jq(document).ready(function(){
+		var num = document.getElementById('today_extcredit').value;
+		var num_arr = (num+'').split('');
+		var u = 77;
+		zzza_jq(".zzza_num").each(function(index){
+			zzza_jq(this).children().css({marginTop :-693 + (77*num_arr[index])});
+		});
+	});
+</script>
+<style>
+.zzza_random_bottom {
+	display:none!important;
+}
+.zzza_random_result {
+	display:block!important;
+}
+.zzza_random_banner{
+	height: 54px;
+    margin-top: 28px;
+    background-position: -97px -60px;
+	line-height: 45px;
+}
+</style>
+<input type="hidden" name="today_extcredit" id="today_extcredit" value="{eval echo sprintf("%03d",$zzzadata['today_extcredit']);}"/>
+<!--{/if}-->
+<div class="zzza_random_box" id="zzza_random_box" <!--{if $over == 'yes' && $today_mark == 1}-->style="display:block;"<!--{/if}-->>
+	<a href="javascript:;" class="zzza_close_random_box" onclick="closeRandomBox();" title="点击关闭">点击关闭</a>
+	<div class="zzza_number_wrap">
+		<div class="zzza_num"><em id="zzza_txt1" style="margin-top: -1463px;"><img src="source/plugin/yinxingfei_zzza/assets/img/snum.png"></em></div>
+		<div class="zzza_num"><em id="zzza_txt2" style="margin-top: -1463px;"><img src="source/plugin/yinxingfei_zzza/assets/img/snum.png"></em></div>
+		<div class="zzza_num"><em id="zzza_txt3" style="margin-top: -1463px;"><img src="source/plugin/yinxingfei_zzza/assets/img/snum.png"></em></div>
+		<div class="zzza_num_last"><span style="font-size:<!--{$set['plate_fontsize']}-->px;"><!--{$extcredit_title}--></span></div>
+	</div>
+	<div class="zzza_random_bottom">
+		<div class="zzza_random_bottom_button"><a href="javascript:;" onclick="zzza_play();">开始摇奖</a></div>
+	</div>
+	<div class="zzza_random_banner">
+		您已经累计抽奖：<!--{$zzzadata['total_counts']}-->天，累积获得奖励<!--{$zzzadata['total_extcredit']}--><!--{$extcredit_title}-->
+	</div>
+	<div class="zzza_random_result" style="display: none;">
+		<div class="zzza_result_contents">
+			<p style="font-size:14px;">恭喜您获得<!--{$zzzadata['today_extcredit']}-->{$extcredit_title}，明天记得再来每日摇摇乐</p>
+		</div>
+	</div>
+	<form id="zzza_form" action="plugin.php?id=yinxingfei_zzza:yinxingfei_zzza&mod=post" method="post"><input type="hidden" name="formhash" value="{FORMHASH}"></form>
+</div>
