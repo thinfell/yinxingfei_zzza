@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `pre_yinxingfei_zzza_kuozhan` (
 
 INSERT INTO `pre_yinxingfei_zzza_kuozhan` (`kzid`, `menu`, `available`, `name`, `identifier`, `description`, `copyright`, `version`, `type`) VALUES
 (1, '进入管理', 1, '备份与恢复', 'sjbf', '备份每日摇摇乐数据 当您转移网站或者重装插件 可以使用该功能备份与恢复数据', '尹兴飞', '1.0', 'admincp'),
-(2, '', 1, '默认转盘主题', 'zp_theme_default', '喜气洋洋的橙红色转盘', '尹兴飞', '1.0', 'zp_theme')
+(2, '', 1, '默认转盘主题', 'zp_theme_default', '喜气洋洋的橙红色转盘', '尹兴飞', '1.0', 'zp_theme');
 
 -- --------------------------------------------------------
 
